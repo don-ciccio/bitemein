@@ -1,262 +1,175 @@
 <script>
-    export let data;
-    const { post } = data;
+	import { formatDate } from '$lib/utils';
+
+	export let data;
+
+	$: ({ content, meta } = data);
 </script>
 
 <svelte:head>
-    <title>{post.title} - BiteMe In Blog</title>
-    <meta name="description" content="{post.excerpt}" />
+	<title>{meta.title}</title>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={meta.title} />
+	<meta name="description" content={meta.description} />
+	<meta property="og:description" content={meta.description} />
+	{#if meta.image}
+		<meta property="og:image" content={meta.image} />
+	{/if}
 </svelte:head>
 
-<section class="post-hero">
-    <div class="container">
-        <div class="post-header">
-            <div class="breadcrumb">
-                <a href="/blog" class="breadcrumb-link">← Back to Blog</a>
-            </div>
-            <div class="post-meta">
-                <time datetime="{post.date}">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                {#if post.author}
-                    <span class="author">by {post.author}</span>
-                {/if}
-            </div>
-            <h1 class="post-title">{post.title}</h1>
-        </div>
-    </div>
-</section>
+<div class="blog-post">
+	<div class="container">
+		<article class="post-content">
+			<header class="post-header">
+				<h1 class="post-title">{meta.title}</h1>
+				<div class="post-meta">
+					<time class="post-date">{formatDate(meta.date)}</time>
+					{#if meta.categories && meta.categories.length > 0}
+						<div class="post-categories">
+							{#each meta.categories as category}
+								<span class="category-tag">{category}</span>
+							{/each}
+						</div>
+					{/if}
+				</div>
+			</header>
 
-<section class="post-content-section section">
-    <div class="container">
-        <article class="post-content">
-            <div class="content">
-                {@html post.content}
-            </div>
-        </article>
+			<div class="prose">
+				<svelte:component this={content} />
+			</div>
+		</article>
 
-        <footer class="post-footer">
-            <div class="footer-actions">
-                <a href="/blog" class="btn btn-secondary">
-                    ← Back to Blog
-                </a>
-                <div class="share-buttons">
-                    <span class="share-label">Share this article:</span>
-                    <a href="https://twitter.com/intent/tweet?text={encodeURIComponent(post.title)}&url={encodeURIComponent(`https://bitemein.com/blog/${post.slug}`)}" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="share-btn twitter">
-                        Twitter
-                    </a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={encodeURIComponent(`https://bitemein.com/blog/${post.slug}`)}"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="share-btn linkedin">
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
-        </footer>
-    </div>
-</section>
+		<nav class="post-navigation">
+			<a href="/blog" class="btn btn-outline">← Back to Blog</a>
+		</nav>
+	</div>
+</div>
 
 <style>
-    .post-hero {
-        padding: 120px 0 60px;
-        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-        position: relative;
-        overflow: hidden;
-        padding-top: 200px;
-        margin-top: -80px;
-    }
+	.blog-post {
+		padding: 2rem 0;
+		min-height: 100vh;
+		background: linear-gradient(135deg, #fef7f0 0%, #fff 100%);
+	}
 
-    .post-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-        pointer-events: none;
-    }
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
 
-    .post-header {
-        max-width: 800px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-    }
+	.post-content {
+		background: white;
+		border-radius: 12px;
+		padding: 3rem;
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		margin-bottom: 2rem;
+	}
 
-    .breadcrumb {
-        margin-bottom: 2rem;
-    }
+	.post-header {
+		margin-bottom: 3rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid #e5e7eb;
+	}
 
-    .breadcrumb-link {
-        color: var(--primary-coral);
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
+	.post-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
 
-    .breadcrumb-link:hover {
-        color: #d85a61;
-    }
+	.post-meta {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
 
-    .post-meta {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 2rem;
-        color: var(--text-gray);
-        font-size: 1rem;
-    }
+	.post-date {
+		color: var(--text-gray);
+		font-size: 0.9rem;
+	}
 
-    .author {
-        position: relative;
-    }
+	.post-categories {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
 
-    .author::before {
-        content: "•";
-        margin-right: 0.5rem;
-    }
+	.category-tag {
+		background: var(--primary-coral);
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
 
-    .post-title {
-        font-size: 3rem;
-        font-weight: 800;
-        line-height: 1.2;
-        color: var(--text-dark);
-        margin: 0;
-    }
+	:global(.prose) {
+		line-height: 1.7;
+		color: var(--text-dark);
+	}
 
-    .post-content-section {
-        background-color: var(--white);
-    }
+	:global(.prose h2) {
+		font-size: 1.8rem;
+		font-weight: 600;
+		color: var(--text-dark);
+		margin: 2rem 0 1rem 0;
+	}
 
-    .post-content {
-        max-width: 800px;
-        margin: 0 auto;
-    }
+	:global(.prose h3) {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: var(--text-dark);
+		margin: 1.5rem 0 0.75rem 0;
+	}
 
-    .content {
-        line-height: 1.8;
-        font-size: 1.1rem;
-        color: var(--text-dark);
-    }
+	:global(.prose p) {
+		margin-bottom: 1.25rem;
+	}
 
-    .content :global(h2) {
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 3rem 0 1.5rem 0;
-        color: var(--text-dark);
-        line-height: 1.3;
-    }
+	:global(.prose ul, .prose ol) {
+		margin: 1rem 0;
+		padding-left: 1.5rem;
+	}
 
-    .content :global(h3) {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 2.5rem 0 1rem 0;
-        color: var(--text-dark);
-    }
+	:global(.prose li) {
+		margin-bottom: 0.5rem;
+	}
 
-    .content :global(p) {
-        margin-bottom: 1.5rem;
-        color: var(--text-dark);
-    }
+	:global(.prose pre) {
+		background: #1e1e1e;
+		border-radius: 8px;
+		padding: 1.5rem;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
 
-    .content :global(ul), .content :global(ol) {
-        margin: 1.5rem 0;
-        padding-left: 2rem;
-    }
+	:global(.prose code) {
+		background: #f3f4f6;
+		padding: 0.2rem 0.4rem;
+		border-radius: 4px;
+		font-size: 0.9em;
+	}
 
-    .content :global(li) {
-        margin-bottom: 0.5rem;
-    }
+	:global(.prose pre code) {
+		background: transparent;
+		padding: 0;
+	}
 
-    .content :global(blockquote) {
-        border-left: 4px solid var(--primary-coral);
-        padding-left: 2rem;
-        margin: 2rem 0;
-        font-style: italic;
-        color: var(--text-gray);
-        background: #f9fafb;
-        padding: 1.5rem 2rem;
-        border-radius: 0 8px 8px 0;
-    }
+	.post-navigation {
+		text-align: center;
+	}
 
-    .post-footer {
-        margin-top: 4rem;
-        padding-top: 3rem;
-        border-top: 2px solid #f3f4f6;
-    }
+	@media (max-width: 768px) {
+		.post-content {
+			padding: 2rem 1.5rem;
+		}
 
-    .footer-actions {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-
-    .share-buttons {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .share-label {
-        color: var(--text-gray);
-        font-weight: 600;
-        font-size: 0.9rem;
-    }
-
-    .share-btn {
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-    }
-
-    .share-btn.twitter {
-        background-color: #1da1f2;
-        color: white;
-    }
-
-    .share-btn.twitter:hover {
-        background-color: #1a91da;
-        transform: translateY(-2px);
-    }
-
-    .share-btn.linkedin {
-        background-color: #0077b5;
-        color: white;
-    }
-
-    .share-btn.linkedin:hover {
-        background-color: #006ba1;
-        transform: translateY(-2px);
-    }
-
-    @media (max-width: 768px) {
-        .post-title {
-            font-size: 2.2rem;
-        }
-
-        .content {
-            font-size: 1rem;
-        }
-
-        .content :global(h2) {
-            font-size: 1.6rem;
-        }
-
-        .footer-actions {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .share-buttons {
-            flex-wrap: wrap;
-        }
-    }
+		.post-title {
+			font-size: 2rem;
+		}
+	}
 </style>

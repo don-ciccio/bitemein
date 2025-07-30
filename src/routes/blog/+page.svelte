@@ -1,204 +1,152 @@
 <script>
-    export let data;
+	import BlogCard from '$lib/components/BlogCard.svelte';
+	export let data;
+
+	$: ({ posts } = data);
 </script>
 
 <svelte:head>
-    <title>Blog - BiteMe In</title>
-    <meta name="description" content="Latest articles and insights from BiteMe In" />
+	<title>Blog - BiteMe In</title>
+	<meta name="description" content="Insights, tips, and updates from the BiteMe In team about food delivery, restaurant management, and industry trends." />
+	<meta property="og:title" content="Blog - BiteMe In" />
+	<meta property="og:description" content="Insights, tips, and updates from the BiteMe In team about food delivery, restaurant management, and industry trends." />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
-<section class="blog-hero">
-    <div class="container">
-        <div class="blog-header">
-            <div class="hero-badge">
-                <span class="badge-text">📚 Latest Insights & Tips</span>
-            </div>
-            <h1 class="hero-title">Blog</h1>
-            <p class="hero-subtitle">
-                Discover the latest trends, tips, and insights about restaurant management, 
-                food delivery, and growing your dining business.
-            </p>
-        </div>
-    </div>
-</section>
+<div class="blog-page">
+	<div class="container">
+		<!-- Hero Section -->
+		<section class="blog-hero">
+			<div class="hero-content">
+				<div class="hero-badge">
+					<span>📝 Our Blog</span>
+				</div>
+				<h1 class="hero-title">Insights & Updates</h1>
+				<p class="hero-subtitle">
+					Stay up to date with the latest trends in food delivery, restaurant management, and industry insights from our team.
+				</p>
+			</div>
+		</section>
 
-<section class="blog-content section">
-    <div class="container">
-        <div class="blog-posts">
-            {#each data.posts as post}
-                <article class="blog-post-card">
-                    <div class="post-meta">
-                        <time datetime="{post.date}">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                        {#if post.author}
-                            <span class="author">by {post.author}</span>
-                        {/if}
-                    </div>
-                    <h2><a href="/blog/{post.slug}">{post.title}</a></h2>
-                    <p class="post-excerpt">{post.excerpt}</p>
-                    <a href="/blog/{post.slug}" class="btn btn-primary read-more">
-                        Read Article
-                        <span class="btn-icon">→</span>
-                    </a>
-                </article>
-            {/each}
-        </div>
-    </div>
-</section>
+		<!-- Blog Posts Grid -->
+		<section class="blog-posts">
+			{#if posts && posts.length > 0}
+				<div class="posts-grid">
+					{#each posts as post (post.slug)}
+						<BlogCard {post} />
+					{/each}
+				</div>
+			{:else}
+				<div class="no-posts">
+					<h3>No posts available</h3>
+					<p>Check back soon for new content!</p>
+				</div>
+			{/if}
+		</section>
+	</div>
+</div>
 
 <style>
-    .blog-hero {
-        padding: 120px 0 60px;
-        background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-        position: relative;
-        overflow: hidden;
-        padding-top: 200px;
-        margin-top: -80px;
-    }
+	.blog-page {
+		min-height: 100vh;
+		background: linear-gradient(135deg, #fef7f0 0%, #fff 100%);
+		padding: 2rem 0;
+	}
 
-    .blog-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-        pointer-events: none;
-    }
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
 
-    .blog-header {
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
+	.blog-hero {
+		text-align: center;
+		margin-bottom: 4rem;
+		padding: 3rem 0;
+	}
 
-    .hero-badge {
-        display: inline-block;
-        margin-bottom: 1.5rem;
-    }
+	.hero-content {
+		max-width: 600px;
+		margin: 0 auto;
+	}
 
-    .badge-text {
-        background: rgba(234, 88, 12, 0.1);
-        color: var(--primary-coral);
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        font-size: 0.7rem;
-        font-weight: 600;
-        border: 1px solid rgba(234, 88, 12, 0.2);
-    }
+	.hero-badge {
+		display: inline-block;
+		background: var(--primary-yellow);
+		color: var(--text-dark);
+		padding: 0.5rem 1rem;
+		border-radius: 25px;
+		font-size: 0.875rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+	}
 
-    .hero-title {
-        font-size: 3.5rem;
-        font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-        color: var(--text-dark);
-    }
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 700;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+		line-height: 1.2;
+	}
 
-    .hero-subtitle {
-        font-size: 1.25rem;
-        line-height: 1.6;
-        color: var(--text-gray);
-        max-width: 600px;
-        margin: 0 auto;
-    }
+	.hero-subtitle {
+		font-size: 1.125rem;
+		color: var(--text-gray);
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
 
-    .blog-content {
-        background-color: var(--white);
-    }
+	.blog-posts {
+		margin-bottom: 4rem;
+	}
 
-    .blog-posts {
-        display: grid;
-        gap: 3rem;
-        max-width: 900px;
-        margin: 0 auto;
-    }
+	.posts-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		align-items: start;
+	}
 
-    .blog-post-card {
-        background: var(--white);
-        padding: 2.5rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        border: 1px solid #f3f4f6;
-    }
+	.no-posts {
+		text-align: center;
+		padding: 4rem 2rem;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
 
-    .blog-post-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
+	.no-posts h3 {
+		color: var(--text-dark);
+		margin-bottom: 0.5rem;
+	}
 
-    .post-meta {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
-        color: var(--text-gray);
-    }
+	.no-posts p {
+		color: var(--text-gray);
+	}
 
-    .author {
-        position: relative;
-    }
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2.5rem;
+		}
 
-    .author::before {
-        content: "•";
-        margin-right: 0.5rem;
-    }
+		.hero-subtitle {
+			font-size: 1rem;
+		}
 
-    .blog-post-card h2 {
-        margin: 0 0 1rem 0;
-        font-size: 1.75rem;
-        font-weight: 700;
-        line-height: 1.3;
-    }
+		.posts-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
 
-    .blog-post-card h2 a {
-        color: var(--text-dark);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+		.blog-hero {
+			margin-bottom: 2rem;
+			padding: 2rem 0;
+		}
+	}
 
-    .blog-post-card h2 a:hover {
-        color: var(--primary-coral);
-    }
-
-    .post-excerpt {
-        color: var(--text-gray);
-        line-height: 1.6;
-        margin-bottom: 2rem;
-        font-size: 1.1rem;
-    }
-
-    .read-more {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .btn-icon {
-        transition: transform 0.3s ease;
-    }
-
-    .read-more:hover .btn-icon {
-        transform: translateX(4px);
-    }
-
-    @media (max-width: 768px) {
-        .hero-title {
-            font-size: 2.5rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .blog-post-card {
-            padding: 2rem;
-        }
-
-        .blog-post-card h2 {
-            font-size: 1.5rem;
-        }
-    }
+	@media (max-width: 480px) {
+		.posts-grid {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>
