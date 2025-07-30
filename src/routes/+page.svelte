@@ -2,6 +2,7 @@
     import Hero from "$lib/components/Hero.svelte";
     import Features from "$lib/components/Features.svelte";
     import Pricing from "$lib/components/Pricing.svelte";
+    import FAQ from "$lib/components/FAQ.svelte";
     import CTA from "$lib/components/CTA.svelte";
 </script>
 
@@ -32,4 +33,5 @@
 <Hero />
 <Features />
 <Pricing />
+<FAQ />
 <CTA />
