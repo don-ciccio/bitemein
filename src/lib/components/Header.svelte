@@ -42,40 +42,31 @@
                         alt="BiteMe In"
                         class="brand-logo"
                     />
-                    <img
-                        src="/assets/isolated-monochrome-black.svg"
-                        alt="BiteMe In"
-                        class="brand-text"
-                    />
+                    <span class="brand-text">BiteMe In</span>
                 </a>
             </div>
 
             <!-- Desktop navigation links -->
             <div class="nav-menu desktop-nav">
-                <a href="#features" class="nav-link" on:click={closeMobileMenu}
+                <a href="/#features" class="nav-link" on:click={closeMobileMenu}
                     >Features</a
                 >
-                <a href="#pricing" class="nav-link" on:click={closeMobileMenu}
+                <a href="/#pricing" class="nav-link" on:click={closeMobileMenu}
                     >Pricing</a
                 >
-                <a
-                    href="#integrations"
-                    class="nav-link"
-                    on:click={closeMobileMenu}>Integrations</a
-                >
-                <a href="#use-cases" class="nav-link" on:click={closeMobileMenu}
-                    >Use Cases</a
+                <a href="/blog" class="nav-link" on:click={closeMobileMenu}
+                    >Blog</a
                 >
             </div>
 
             <div class="nav-actions">
                 <a
-                    href="#contact"
+                    href="/#contact"
                     class="btn btn-outline"
                     on:click={closeMobileMenu}>Contact</a
                 >
                 <a
-                    href="#get-started"
+                    href="/#get-started"
                     class="btn btn-primary"
                     on:click={closeMobileMenu}>Get Started</a
                 >
@@ -96,26 +87,33 @@
 
     <!-- Mobile nav-menu OUTSIDE of nav to avoid island class inheritance -->
     <div class="nav-menu mobile-nav" class:active={mobileMenuOpen}>
-        <a href="#features" class="nav-link" on:click={closeMobileMenu}
+        <!-- Close button in top right -->
+        <button
+            class="mobile-menu-close"
+            on:click={closeMobileMenu}
+            aria-label="Close mobile menu"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="/#features" class="nav-link" on:click={closeMobileMenu}
             >Features</a
         >
-        <a href="#pricing" class="nav-link" on:click={closeMobileMenu}
+        <a href="/#pricing" class="nav-link" on:click={closeMobileMenu}
             >Pricing</a
         >
-        <a href="#integrations" class="nav-link" on:click={closeMobileMenu}
-            >Integrations</a
-        >
-        <a href="#use-cases" class="nav-link" on:click={closeMobileMenu}
-            >Use Cases</a
+        <a href="/blog" class="nav-link" on:click={closeMobileMenu}
+            >Blog</a
         >
         <div class="mobile-actions">
             <a
-                href="#contact"
+                href="/#contact"
                 class="btn btn-outline"
                 on:click={closeMobileMenu}>Contact</a
             >
             <a
-                href="#get-started"
+                href="/#get-started"
                 class="btn btn-primary"
                 on:click={closeMobileMenu}>Get Started</a
             >
@@ -239,6 +237,43 @@
         height: 40px;
         width: auto;
         transition: all 0.3s ease;
+        display: block;
+    }
+
+    .brand-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        font-family: inherit;
+        transition: all 0.3s ease;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav.island .brand-logo {
+        height: 32px;
+    }
+
+    .nav.island .brand-text {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .header.scrolled .brand-logo {
+        height: 30px;
+    }
+
+    .header.scrolled .brand-text {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .brand-link:hover .brand-text {
+        color: var(--primary-coral);
     }
 
     .brand-text {
@@ -277,11 +312,15 @@
         transition: all 0.3s ease;
         position: relative;
         padding: 0.5rem 0;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .header.scrolled .nav-link {
-        font-size: 0.85rem;
+        font-size: 1.05rem;
+    }
+
+    .header.scrolled .nav-link {
+        font-size: 1.05rem;
     }
 
     .nav-link:hover {
@@ -800,5 +839,70 @@
         :global(body) {
             padding-top: 70px;
         }
+    }
+
+    /* Hide entire header when mobile menu is open */
+    body.mobile-menu-open .header {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    /* Mobile menu close button */
+    .mobile-menu-close {
+        position: absolute;
+        top: 1rem; /* Match header padding */
+        right: 1rem; /* Match header padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        transition: all 0.2s ease;
+        z-index: 1010;
+    }
+
+    .mobile-menu-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+    }
+
+    .mobile-menu-close span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #374151;
+        border-radius: 1px;
+        transition: all 0.2s ease;
+        position: absolute;
+    }
+
+    .mobile-menu-close span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu-close span:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+
+    /* Ensure mobile menu has higher z-index than hidden header */
+    .mobile-nav {
+        z-index: 1005 !important;
+    }
+
+    .mobile-nav.active {
+        transform: translateX(0) !important;
+        visibility: visible;
+        opacity: 1;
     }
 </style>
