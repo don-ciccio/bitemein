@@ -42,53 +42,22 @@
             </div>
 
             <div class="footer-section">
-                <h4>Product</h4>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="mailto:support@bitemein.com">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Get Started</h4>
+                <ul>
                     <li>
                         <a href="https://apps.shopify.com/biteme-in"
-                            >Shopify App</a
+                            >Install Shopify App</a
                         >
-                    </li>
-                    <li>
-                        <span class="footer-link-placeholder"
-                            >API Documentation</span
-                        >
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Support</h4>
-                <ul>
-                    <li>
-                        <span class="footer-link-placeholder">Help Center</span>
-                    </li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li>
-                        <span class="footer-link-placeholder">Setup Guide</span>
-                    </li>
-                    <li>
-                        <span class="footer-link-placeholder"
-                            >Video Tutorials</span
-                        >
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li>
-                        <span class="footer-link-placeholder">About Us</span>
-                    </li>
-                    <li><span class="footer-link-placeholder">Blog</span></li>
-                    <li>
-                        <span class="footer-link-placeholder">Careers</span>
-                    </li>
-                    <li>
-                        <span class="footer-link-placeholder">Press Kit</span>
                     </li>
                 </ul>
             </div>
@@ -97,12 +66,6 @@
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p>&copy; 2024 BiteMe In. All rights reserved.</p>
-                <div class="footer-links">
-                    <span class="footer-link-placeholder">Privacy Policy</span>
-                    <span class="footer-link-placeholder">Terms of Service</span
-                    >
-                    <span class="footer-link-placeholder">Cookie Policy</span>
-                </div>
             </div>
         </div>
     </div>
@@ -117,7 +80,7 @@
 
     .footer-content {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
         gap: 3rem;
         margin-bottom: 3rem;
     }
@@ -159,11 +122,6 @@
         color: var(--primary-coral);
     }
 
-    .footer-link-placeholder {
-        color: #6b7280;
-        cursor: default;
-    }
-
     .social-links {
         display: flex;
         gap: 1rem;
@@ -188,29 +146,13 @@
 
     .footer-bottom-content {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
 
     .footer-bottom p {
         color: #9ca3af;
         margin: 0;
-    }
-
-    .footer-links {
-        display: flex;
-        gap: 2rem;
-    }
-
-    .footer-links a {
-        color: #9ca3af;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-        color: var(--primary-coral);
     }
 
     @media (max-width: 768px) {
@@ -220,13 +162,7 @@
         }
 
         .footer-bottom-content {
-            flex-direction: column;
-            gap: 1rem;
             text-align: center;
-        }
-
-        .footer-links {
-            justify-content: center;
         }
     }
 </style>
