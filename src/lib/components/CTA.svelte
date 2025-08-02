@@ -3,18 +3,17 @@
         <div class="cta-content text-center">
             <h2>Ready to Transform Your Restaurant?</h2>
             <p>
-                Join 1,500+ restaurants already using BiteMe In to reduce
-                no-shows and streamline bookings
+                Streamline your restaurant bookings with our comprehensive table reservation system
             </p>
             <div class="cta-buttons">
                 <a
-                    href="https://apps.shopify.com/biteme-in"
+                    href="https://apps.shopify.com/bitemein-restaurant-booking"
                     class="btn btn-primary btn-large"
                 >
-                    Start Free Trial
+                    Get Started
                 </a>
-                <a href="#contact" class="btn btn-secondary btn-large">
-                    Schedule Demo
+                <a href="mailto:support@bitemein.com" class="btn btn-secondary btn-large">
+                    Contact Support
                 </a>
             </div>
         </div>

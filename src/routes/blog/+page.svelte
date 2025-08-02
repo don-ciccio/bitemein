@@ -6,17 +6,52 @@
 </script>
 
 <svelte:head>
-    <title>Blog - BiteMe In</title>
-    <meta
-        name="description"
-        content="Insights, tips, and updates from the BiteMe In team about food delivery, restaurant management, and industry trends."
-    />
-    <meta property="og:title" content="Blog - BiteMe In" />
-    <meta
-        property="og:description"
-        content="Insights, tips, and updates from the BiteMe In team about food delivery, restaurant management, and industry trends."
-    />
+    <!-- Primary Meta Tags -->
+    <title>Restaurant Table Booking System Blog - BiteMe In | Shopify App Insights</title>
+    <meta name="title" content="Restaurant Table Booking System Blog - BiteMe In | Shopify App Insights" />
+    <meta name="description" content="Expert insights on restaurant table booking systems, Shopify restaurant apps, reservation management, and industry trends. Learn how to optimize your restaurant operations." />
+    <meta name="keywords" content="restaurant table booking blog, shopify restaurant app insights, table reservation tips, restaurant management blog, booking system guides, restaurant industry trends" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bitemein.com/blog" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bitemein.com/blog" />
+    <meta property="og:title" content="Restaurant Table Booking System Blog - BiteMe In" />
+    <meta property="og:description" content="Expert insights on restaurant table booking systems, Shopify restaurant apps, and reservation management strategies." />
+    <meta property="og:image" content="https://bitemein.com/assets/vecteezy_a-variety-of-dishes-are-laid-out-on-the-table-to-prepare-for_8934713.jpg" />
+    <meta property="og:site_name" content="BiteMe In" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://bitemein.com/blog" />
+    <meta property="twitter:title" content="Restaurant Table Booking System Blog - BiteMe In" />
+    <meta property="twitter:description" content="Expert insights on restaurant table booking systems, Shopify restaurant apps, and reservation management strategies." />
+    <meta property="twitter:image" content="https://bitemein.com/assets/vecteezy_a-variety-of-dishes-are-laid-out-on-the-table-to-prepare-for_8934713.jpg" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "BiteMe In Restaurant Table Booking System Blog",
+      "description": "Expert insights on restaurant table booking systems, Shopify restaurant apps, reservation management, and industry trends.",
+      "url": "https://bitemein.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BiteMe In",
+        "url": "https://bitemein.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bitemein.com/assets/logobitemein.svg"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bitemein.com/blog"
+      }
+    }
+    </script>
 </svelte:head>
 
 <div class="blog-page">

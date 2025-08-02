@@ -61,12 +61,19 @@
 
             <div class="nav-actions">
                 <a
-                    href="/#contact"
+                    href="https://docs.bitemein.com/"
+                    class="btn btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    on:click={closeMobileMenu}>Docs</a
+                >
+                <a
+                    href="mailto:support@bitemein.com"
                     class="btn btn-outline"
                     on:click={closeMobileMenu}>Contact</a
                 >
                 <a
-                    href="/#get-started"
+                    href="https://apps.shopify.com/bitemein-restaurant-booking"
                     class="btn btn-primary"
                     on:click={closeMobileMenu}>Get Started</a
                 >
@@ -103,17 +110,22 @@
         <a href="/#pricing" class="nav-link" on:click={closeMobileMenu}
             >Pricing</a
         >
-        <a href="/blog" class="nav-link" on:click={closeMobileMenu}
-            >Blog</a
-        >
+        <a href="/blog" class="nav-link" on:click={closeMobileMenu}>Blog</a>
         <div class="mobile-actions">
             <a
-                href="/#contact"
+                href="https://docs.bitemein.com/"
+                class="btn btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
+                on:click={closeMobileMenu}>Docs</a
+            >
+            <a
+                href="mailto:support@bitemein.com"
                 class="btn btn-outline"
                 on:click={closeMobileMenu}>Contact</a
             >
             <a
-                href="/#get-started"
+                href="https://apps.shopify.com/bitemein-restaurant-booking"
                 class="btn btn-primary"
                 on:click={closeMobileMenu}>Get Started</a
             >

@@ -31,7 +31,7 @@
                         Install Free App
                         <span class="btn-icon">→</span>
                     </a>
-                    <a href="#features" class="btn btn-outline btn-large">
+                    <a href="/#features" class="btn btn-outline btn-large">
                         View Features
                     </a>
                 </div>
@@ -53,8 +53,8 @@
             <div class="hero-visual">
                 <div class="hero-image">
                     <img
-                        src="/assets/logobitemein.svg"
-                        alt="BiteMe In Dashboard"
+                        src="/assets/vecteezy_man-in-a-restaurant-looking-at-the-food-menu-illustration.png"
+                        alt="Customer browsing restaurant menu"
                         class="dashboard-preview"
                     />
                     <div class="floating-card card-1">
@@ -212,16 +212,35 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 3rem;
     }
 
     .dashboard-preview {
         width: 100%;
         max-width: 400px;
-        height: auto;
+        height: 400px;
+        object-fit: cover;
         border-radius: 16px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        background: white;
-        padding: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero-image {
+            padding: 2rem;
+        }
+        .dashboard-preview {
+            max-width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-image {
+            padding: 1.5rem;
+        }
+        .dashboard-preview {
+            max-width: 250px;
+            height: 250px;
+        }
     }
 
     .floating-card {

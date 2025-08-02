@@ -1,0 +1,21 @@
+{
+  "name": "BiteMe In - Restaurant Table Booking System",
+  "short_name": "BiteMe In",
+  "description": "Restaurant table booking system for Shopify that reduces no-shows by 60% with automated reservations and SMS reminders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6b35",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "food"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

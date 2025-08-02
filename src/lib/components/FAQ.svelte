@@ -26,8 +26,8 @@
                     Can I customize time slots and reservation limits?
                 </h3>
                 <p class="faq-answer">
-                    Yes; Essential and Pro plans allow flexible time slots,
-                    table merging, and advanced management.
+                    Yes; Essential and Pro plans allow flexible time slots and
+                    advanced management.
                 </p>
             </div>
 

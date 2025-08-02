@@ -13,39 +13,13 @@
                     The leading restaurant table booking app for Shopify. Reduce
                     no-shows and streamline your reservation process.
                 </p>
-                <div class="social-links">
-                    <a
-                        href="https://twitter.com/bitemein"
-                        aria-label="Twitter"
-                        target="_blank"
-                        rel="noopener noreferrer">🐦</a
-                    >
-                    <a
-                        href="https://facebook.com/bitemein"
-                        aria-label="Facebook"
-                        target="_blank"
-                        rel="noopener noreferrer">📘</a
-                    >
-                    <a
-                        href="https://instagram.com/bitemein"
-                        aria-label="Instagram"
-                        target="_blank"
-                        rel="noopener noreferrer">📷</a
-                    >
-                    <a
-                        href="https://linkedin.com/company/bitemein"
-                        aria-label="LinkedIn"
-                        target="_blank"
-                        rel="noopener noreferrer">💼</a
-                    >
-                </div>
             </div>
 
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="mailto:support@bitemein.com">Contact</a></li>
                 </ul>
@@ -65,7 +39,7 @@
 
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <p>&copy; 2024 BiteMe In. All rights reserved.</p>
+                <p>&copy; 2025 BiteMe In. All rights reserved.</p>
             </div>
         </div>
     </div>
