@@ -17,10 +17,10 @@
                         <span class="amount">0</span>
                         <span class="period">/month</span>
                     </div>
-                    <p>Perfect for small restaurants getting started</p>
+                    <p>Perfect for small restaurants trying out the app</p>
                 </div>
                 <ul class="features-list">
-                    <li>✓ Up to 15 reservations per month</li>
+                    <li>✓ Up to 15 reservations</li>
                     <li>✓ Up to 10 tables</li>
                     <li>✓ Basic reservation management</li>
                     <li>✓ Email notifications</li>

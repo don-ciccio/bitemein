@@ -28,7 +28,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Install Free App
+                        Try BiteMe In for Free
                         <span class="btn-icon">→</span>
                     </a>
                     <a href="/#features" class="btn btn-outline btn-large">
