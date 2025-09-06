@@ -95,7 +95,7 @@ Advanced table management systems provide detailed analytics to help restaurants
 
 ## Future of Restaurant Table Management
 
-Table management technology continues evolving with features like predictive analytics for demand forecasting, AI-powered seating optimization, and integration with customer preference databases. These advances help restaurants stay competitive while delivering exceptional dining experiences.
+Table management technology continues evolving with features like predictive analytics for demand forecasting, AI-powered seating optimization, and integration with customer preference databases. Multi-location support, now available in BiteMe In's Pro plan (supporting up to 5 locations), allows restaurant groups to centralize their reservation management across multiple venues. These advances help restaurants stay competitive while delivering exceptional dining experiences.
 
 ---
 

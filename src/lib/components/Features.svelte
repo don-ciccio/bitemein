@@ -66,6 +66,15 @@
                     need for separate dashboards or complex integrations.
                 </p>
             </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏢</div>
+                <h3>Multi-Location Support</h3>
+                <p>
+                    Manage up to 5 restaurant locations from a single dashboard with our Pro plan.
+                    Perfect for restaurant groups or businesses with multiple branches.
+                </p>
+            </div>
         </div>
     </div>
 </section>

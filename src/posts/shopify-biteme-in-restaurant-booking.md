@@ -66,7 +66,7 @@ No coding required - the app integrates seamlessly with your existing Shopify th
 
 BiteMe In stands out as a comprehensive solution that grows with your restaurant business. The app's focus on automation and real-time management helps restaurants operate more efficiently while providing customers with a smooth, professional booking experience.
 
-Whether you're running a small cafe or managing multiple restaurant locations, BiteMe In adapts to your needs without requiring technical expertise or complex setup procedures.
+Whether you're running a small cafe or managing multiple restaurant locations, BiteMe In adapts to your needs without requiring technical expertise or complex setup procedures. Our Pro plan now supports up to 5 locations, making it perfect for restaurant groups or businesses with several branches that need centralized reservation management.
 
 ---
 

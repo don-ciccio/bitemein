@@ -15,9 +15,10 @@
                     locations?
                 </h3>
                 <p class="faq-answer">
-                    Currently, table management is tied to a single storefront.
-                    For multi-location support, check for future updates or
-                    contact the developer.
+                    Yes! Our Pro plan now supports up to 5 locations, allowing you to manage
+                    multiple restaurant venues from a single dashboard. This feature is perfect for
+                    restaurant groups or businesses with several branches that need centralized
+                    reservation management.
                 </p>
             </div>
 
