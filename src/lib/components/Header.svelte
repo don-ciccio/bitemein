@@ -42,7 +42,12 @@
     });
 </script>
 
-<header class="header" class:scrolled class:blog-page={isLightBackground} bind:this={headerElement}>
+<header
+    class="header"
+    class:scrolled
+    class:blog-page={isLightBackground}
+    bind:this={headerElement}
+>
     <nav class="nav" class:island={scrolled}>
         <div class="nav-container">
             <div class="nav-brand">
@@ -259,8 +264,8 @@
     }
 
     .brand-text {
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: 1.7rem;
+        font-weight: 800;
         color: var(--white);
         font-family: inherit;
         transition: all 0.3s ease;
