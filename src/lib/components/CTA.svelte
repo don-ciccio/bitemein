@@ -3,7 +3,8 @@
         <div class="cta-content text-center">
             <h2>Ready to Transform Your Restaurant?</h2>
             <p>
-                Streamline your restaurant bookings with our comprehensive table reservation system
+                Streamline your restaurant bookings with our comprehensive table
+                reservation system
             </p>
             <div class="cta-buttons">
                 <a
@@ -12,7 +13,10 @@
                 >
                     Get Started
                 </a>
-                <a href="mailto:support@bitemein.com" class="btn btn-secondary btn-large">
+                <a
+                    href="mailto:support@bitemein.com"
+                    class="btn btn-outline btn-large"
+                >
                     Contact Support
                 </a>
             </div>
@@ -24,22 +28,22 @@
     .cta {
         background: linear-gradient(
             135deg,
-            var(--primary-yellow) 0%,
-            #f0d878 100%
+            var(--primary-coral) 0%,
+            #ff7a79 100%
         );
     }
 
     .cta-content h2 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
-        color: var(--text-dark);
+        color: var(--white);
     }
 
     .cta-content p {
         font-size: 1.2rem;
-        color: var(--text-dark);
+        color: var(--white);
         margin-bottom: 2rem;
-        opacity: 0.8;
+        opacity: 0.9;
     }
 
     .cta-buttons {

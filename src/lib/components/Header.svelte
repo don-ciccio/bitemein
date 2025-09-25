@@ -1,9 +1,19 @@
 <script>
     import { onMount } from "svelte";
+    import { page } from "$app/stores";
 
     let mobileMenuOpen = false;
     let scrolled = false;
     let headerElement;
+
+    // Determine if we're on a light background page
+    $: isLightBackground = $page.route.id?.includes("/blog");
+    // When scrolled on blog pages, use white logo; otherwise use appropriate logo for background
+    $: logoSrc = isLightBackground
+        ? scrolled
+            ? "/assets/restyling/BiteMe In-29.png"
+            : "/assets/restyling/BiteMe In-28.png"
+        : "/assets/restyling/BiteMe In-29.png";
 
     function toggleMobileMenu() {
         mobileMenuOpen = !mobileMenuOpen;
@@ -32,16 +42,12 @@
     });
 </script>
 
-<header class="header" class:scrolled bind:this={headerElement}>
+<header class="header" class:scrolled class:blog-page={isLightBackground} bind:this={headerElement}>
     <nav class="nav" class:island={scrolled}>
         <div class="nav-container">
             <div class="nav-brand">
                 <a href="/" class="brand-link" on:click={closeMobileMenu}>
-                    <img
-                        src="/assets/logobitemein.svg"
-                        alt="BiteMe In"
-                        class="brand-logo"
-                    />
+                    <img src={logoSrc} alt="BiteMe In" class="brand-logo" />
                     <span class="brand-text">BiteMe In</span>
                 </a>
             </div>
@@ -184,11 +190,11 @@
     }
 
     .nav.island {
-        background: rgba(243, 225, 149, 0.98);
+        background: rgba(251, 94, 93, 0.95);
         backdrop-filter: blur(10px);
         border-radius: 50px;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-        border: 1px solid rgba(234, 88, 12, 0.1);
+        border: 1px solid rgba(251, 94, 93, 0.2);
         transform: scale(0.95);
         z-index: 1001; /* Ensure island nav has proper stacking context */
     }
@@ -246,7 +252,7 @@
     }
 
     .brand-logo {
-        height: 40px;
+        height: 48px;
         width: auto;
         transition: all 0.3s ease;
         display: block;
@@ -255,7 +261,7 @@
     .brand-text {
         font-size: 1.5rem;
         font-weight: 700;
-        color: var(--text-dark);
+        color: var(--white);
         font-family: inherit;
         transition: all 0.3s ease;
         letter-spacing: -0.02em;
@@ -266,8 +272,18 @@
         padding: 0;
     }
 
+    /* Blog page brand text - darker color for light background */
+    .header.blog-page .brand-text {
+        color: var(--text-dark);
+    }
+
+    /* When scrolled on blog pages, use white text */
+    .header.blog-page.scrolled .brand-text {
+        color: var(--white);
+    }
+
     .nav.island .brand-logo {
-        height: 32px;
+        height: 40px;
     }
 
     .nav.island .brand-text {
@@ -276,7 +292,7 @@
     }
 
     .header.scrolled .brand-logo {
-        height: 30px;
+        height: 36px;
     }
 
     .header.scrolled .brand-text {
@@ -285,7 +301,17 @@
     }
 
     .brand-link:hover .brand-text {
+        color: var(--white);
+    }
+
+    /* Blog page brand-link hover - coral color */
+    .header.blog-page .brand-link:hover .brand-text {
         color: var(--primary-coral);
+    }
+
+    /* Blog page scrolled brand-link hover - white color */
+    .header.blog-page.scrolled .brand-link:hover .brand-text {
+        color: var(--white);
     }
 
     .brand-text {
@@ -318,13 +344,42 @@
     }
 
     .nav-link {
-        color: var(--text-dark);
+        color: var(--white);
         text-decoration: none;
         font-weight: 500;
         transition: all 0.3s ease;
         position: relative;
         padding: 0.5rem 0;
         font-size: 1.1rem;
+    }
+
+    /* Blog page navigation links - coral color for light background */
+    .header.blog-page .nav-link {
+        color: var(--primary-coral) !important;
+        font-weight: 600;
+    }
+
+    /* Blog page navigation menu styling */
+    .header.blog-page .nav-menu {
+        color: var(--primary-coral);
+    }
+
+    .header.blog-page .desktop-nav {
+        color: var(--primary-coral);
+    }
+
+    /* When scrolled on blog pages, use white text */
+    .header.blog-page.scrolled .nav-link {
+        color: var(--white) !important;
+        font-weight: 500;
+    }
+
+    .header.blog-page.scrolled .nav-menu {
+        color: var(--white);
+    }
+
+    .header.blog-page.scrolled .desktop-nav {
+        color: var(--white);
     }
 
     .header.scrolled .nav-link {
@@ -336,7 +391,25 @@
     }
 
     .nav-link:hover {
-        color: var(--primary-coral);
+        color: var(--white);
+        transform: translateY(-1px);
+    }
+
+    /* Home page nav-link hover - keep white color when scrolled */
+    .header.scrolled .nav-link:hover {
+        color: var(--white);
+        transform: translateY(-1px);
+    }
+
+    /* Blog page nav-link hover - maintain coral color */
+    .header.blog-page .nav-link:hover {
+        color: var(--primary-coral) !important;
+        transform: translateY(-1px);
+    }
+
+    /* Blog page scrolled nav-link hover - maintain white color */
+    .header.blog-page.scrolled .nav-link:hover {
+        color: var(--white) !important;
         transform: translateY(-1px);
     }
 
@@ -347,8 +420,18 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: var(--primary-coral);
+        background: var(--white);
         border-radius: 1px;
+    }
+
+    /* Blog page nav-link hover underline - coral color */
+    .header.blog-page .nav-link:hover::after {
+        background: var(--primary-coral);
+    }
+
+    /* Blog page scrolled nav-link hover underline - white color */
+    .header.blog-page.scrolled .nav-link:hover::after {
+        background: var(--white);
     }
 
     .nav-actions {
@@ -407,17 +490,18 @@
     }
 
     .btn-outline {
-        color: var(--text-dark);
-        border-color: rgba(26, 26, 26, 0.2);
-        background: rgba(255, 255, 255, 0.8);
+        color: var(--primary-coral);
+        border: 2px solid var(--primary-coral);
+        background: rgba(255, 255, 255, 0.95);
+        font-weight: 600;
     }
 
     .btn-outline:hover {
         border-color: var(--primary-coral);
-        color: var(--primary-coral);
+        color: white;
+        background: var(--primary-coral);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
-        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 6px 20px rgba(251, 94, 93, 0.3);
     }
 
     .btn-primary {
@@ -427,10 +511,10 @@
     }
 
     .btn-primary:hover {
-        background: #e53e3e;
-        border-color: #e53e3e;
+        background: #d85a61;
+        border-color: #d85a61;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);
+        box-shadow: 0 6px 20px rgba(251, 94, 93, 0.4);
     }
 
     .mobile-menu-toggle {
@@ -466,10 +550,15 @@
     .mobile-menu-toggle span {
         width: 25px;
         height: 3px;
-        background: var(--text-dark);
+        background: var(--white);
         margin: 3px 0;
         transition: all 0.3s ease;
         border-radius: 2px;
+    }
+
+    /* Blog page mobile menu toggle - coral color for light background */
+    .header.blog-page .mobile-menu-toggle span {
+        background: var(--primary-coral);
     }
 
     /* Ensure spans don't change size on scroll */
@@ -477,7 +566,12 @@
         width: 25px !important;
         height: 3px !important;
         margin: 3px 0 !important;
-        background: var(--text-dark) !important;
+        background: var(--white) !important;
+    }
+
+    /* Blog page scrolled mobile menu toggle - white color when scrolled */
+    .header.blog-page.scrolled .mobile-menu-toggle span {
+        background: var(--white) !important;
     }
 
     .mobile-menu-toggle:hover {
@@ -537,7 +631,11 @@
             max-width: none !important;
             max-height: none !important;
             margin: 0 !important;
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            background: linear-gradient(
+                135deg,
+                rgba(251, 94, 93, 0.95) 0%,
+                rgba(251, 94, 93, 0.9) 100%
+            );
             backdrop-filter: blur(20px);
             flex-direction: column;
             justify-content: center;
@@ -615,7 +713,11 @@
             max-width: none !important;
             max-height: none !important;
             margin: 0 !important;
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            background: linear-gradient(
+                135deg,
+                rgba(251, 94, 93, 0.95) 0%,
+                rgba(251, 94, 93, 0.9) 100%
+            );
             backdrop-filter: blur(20px);
             flex-direction: column;
             justify-content: center;
@@ -699,6 +801,11 @@
             font-weight: 600;
         }
 
+        /* Blog page mobile nav-links - white color in mobile menu */
+        .header.blog-page .mobile-nav .nav-link {
+            color: var(--white) !important;
+        }
+
         /* Ensure nav-links don't shrink on scroll */
         .header.scrolled .nav-menu .nav-link {
             font-size: 1.5rem !important;
@@ -778,19 +885,29 @@
         .mobile-menu-toggle span {
             width: 25px !important;
             height: 3px !important;
-            background: var(--text-dark) !important;
+            background: var(--white) !important;
             margin: 3px 0 !important;
             transition: all 0.3s ease !important;
             border-radius: 2px !important;
         }
 
+        /* Blog page mobile menu toggle - coral color for light background */
+        .header.blog-page .mobile-menu-toggle span {
+            background: var(--primary-coral) !important;
+        }
+
         .header.scrolled .mobile-menu-toggle span {
             width: 25px !important;
             height: 3px !important;
-            background: var(--text-dark) !important;
+            background: var(--white) !important;
             margin: 3px 0 !important;
             transition: all 0.3s ease !important;
             border-radius: 2px !important;
+        }
+
+        /* Blog page scrolled mobile menu toggle - white color when scrolled */
+        .header.blog-page.scrolled .mobile-menu-toggle span {
+            background: var(--white) !important;
         }
 
         /* Ensure active state animations work on scroll */
@@ -813,10 +930,15 @@
         .mobile-menu-toggle span {
             width: 25px;
             height: 3px;
-            background: var(--text-dark);
+            background: var(--white);
             margin: 3px 0;
             transition: all 0.3s ease;
             border-radius: 2px;
+        }
+
+        /* Blog page mobile menu toggle - coral color for light background */
+        .header.blog-page .mobile-menu-toggle span {
+            background: var(--primary-coral);
         }
 
         .mobile-menu-toggle:hover span {
@@ -893,7 +1015,7 @@
         display: block;
         width: 20px;
         height: 2px;
-        background: #374151;
+        background: var(--white);
         border-radius: 1px;
         transition: all 0.2s ease;
         position: absolute;

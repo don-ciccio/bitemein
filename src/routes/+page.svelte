@@ -37,8 +37,8 @@
     <meta property="twitter:image:alt" content="Restaurant table booking system interface" />
     
     <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#ff6b35" />
-    <meta name="msapplication-TileColor" content="#ff6b35" />
+    <meta name="theme-color" content="#FB5E5D" />
+    <meta name="msapplication-TileColor" content="#FB5E5D" />
     <meta name="application-name" content="BiteMe In" />
     <meta name="apple-mobile-web-app-title" content="BiteMe In" />
     <meta name="apple-mobile-web-app-capable" content="yes" />

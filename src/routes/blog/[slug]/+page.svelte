@@ -55,7 +55,7 @@
       "@type": "BlogPosting",
       "headline": "{meta.title}",
       "description": "{meta.description}",
-      "image": "{meta.image ? 'https://bitemein.com' + meta.image : 'https://bitemein.com/assets/logobitemein.svg'}",
+      "image": "{meta.image ? 'https://bitemein.com' + meta.image : 'https://bitemein.com/assets/restyling/BiteMe In-29.png'}",
       "author": {
         "@type": "Organization",
         "name": "BiteMe In",
@@ -67,7 +67,7 @@
         "url": "https://bitemein.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://bitemein.com/assets/logobitemein.svg"
+          "url": "https://bitemein.com/assets/restyling/BiteMe In-29.png"
         }
       },
       "datePublished": "{meta.date}",

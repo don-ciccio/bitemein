@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Glory:ital,wght@0,100..800;1,100..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mina:wght@400;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
 :root {
-	--primary-yellow: #F3E195;
-	--primary-coral: #E96E75;
+	--primary-coral: #FB5E5D;
+	--secondary-gray: #E6E5E6;
+	--text-gray: #AAAAAA;
 	--text-dark: #1a1a1a;
-	--text-gray: #6b7280;
+	--white: #FFFFFF;
 	--bg-light: #fafafa;
-	--white: #ffffff;
 }
 
 * {
@@ -15,9 +15,9 @@
 }
 
 body {
-	font-family: 'Cabin', sans-serif;
+	font-family: 'Ropa Sans', sans-serif;
 	line-height: 1.6;
-	color: var(--text-dark);
+	color: var(--white);
 	background-color: var(--white);
 	font-size: 21px;
 }
@@ -71,13 +71,31 @@ body {
 }
 
 .btn-secondary {
-	background-color: var(--primary-yellow);
-	color: var(--text-dark);
+	background-color: transparent;
+	color: var(--primary-coral);
+	border: 2px solid var(--primary-coral);
 }
 
 .btn-secondary:hover {
-	background-color: #f0d878;
+	background-color: var(--primary-coral);
+	color: white;
 	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(251, 94, 93, 0.3);
+}
+
+.btn-outline {
+	color: var(--primary-coral);
+	border: 2px solid var(--primary-coral);
+	background: rgba(255, 255, 255, 0.95);
+	font-weight: 600;
+}
+
+.btn-outline:hover {
+	border-color: var(--primary-coral);
+	color: white;
+	background: var(--primary-coral);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(251, 94, 93, 0.3);
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -15,9 +15,10 @@
                     locations?
                 </h3>
                 <p class="faq-answer">
-                    Yes! Our Pro plan now supports up to 5 locations, allowing you to manage
-                    multiple restaurant venues from a single dashboard. This feature is perfect for
-                    restaurant groups or businesses with several branches that need centralized
+                    Yes! Our Pro plan now supports up to 5 locations, allowing
+                    you to manage multiple restaurant venues from a single
+                    dashboard. This feature is perfect for restaurant groups or
+                    businesses with several branches that need centralized
                     reservation management.
                 </p>
             </div>
@@ -39,17 +40,6 @@
                     keep guests informed and reduce missed reservations.
                 </p>
             </div>
-        </div>
-
-        <div class="faq-conclusion">
-            <h3>Ready to Get Started?</h3>
-            <p>
-                Enabling restaurant reservations on Shopify with BiteMe In
-                Restaurant Booking helps you capture more bookings, manage
-                tables efficiently, and provide a smooth guest experience. Start
-                today and watch your dining room fill up with happy, satisfied
-                customers eager to return.
-            </p>
         </div>
     </div>
 </section>

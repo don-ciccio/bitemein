@@ -91,54 +91,12 @@
                 >
             </div>
         </div>
-
-        <div class="pricing-features">
-            <div class="container">
-                <div class="text-center" style="margin-top: 3rem;">
-                    <h3>All Plans Include</h3>
-                    <div class="grid grid-3" style="margin-top: 2rem;">
-                        <div class="benefit">
-                            <div class="benefit-icon">🎯</div>
-                            <h4>Dynamic Table Allocation</h4>
-                            <p>
-                                Live capacity tracking with conflict prevention
-                            </p>
-                        </div>
-                        <div class="benefit">
-                            <div class="benefit-icon">🔧</div>
-                            <h4>One-Click Widget</h4>
-                            <p>Auto-adapts to any Shopify theme</p>
-                        </div>
-                        <div class="benefit">
-                            <div class="benefit-icon">📧</div>
-                            <h4>Smart Reminders</h4>
-                            <p>Automated confirmation emails</p>
-                        </div>
-                        <div class="benefit">
-                            <div class="benefit-icon">⚡</div>
-                            <h4>Real-Time Scheduling</h4>
-                            <p>Instant availability management</p>
-                        </div>
-                        <div class="benefit">
-                            <div class="benefit-icon">🎨</div>
-                            <h4>Theme Compatible</h4>
-                            <p>Works with latest Shopify themes</p>
-                        </div>
-                        <div class="benefit">
-                            <div class="benefit-icon">🛡️</div>
-                            <h4>Admin Integration</h4>
-                            <p>Manage from Shopify admin panel</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
 <style>
     .pricing {
-        background-color: var(--bg-light);
+        background-color: var(--white);
     }
 
     .section-header {
@@ -172,12 +130,12 @@
 
     .pricing-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 25px rgba(251, 94, 93, 0.15);
     }
 
     .pricing-card.popular {
         border-color: var(--primary-coral);
-        box-shadow: 0 8px 25px rgba(234, 88, 12, 0.15);
+        box-shadow: 0 8px 25px rgba(251, 94, 93, 0.15);
     }
 
     .popular-badge {
@@ -226,12 +184,12 @@
 
     .period {
         font-size: 1rem;
-        color: #6b7280;
+        color: var(--text-gray);
         margin-left: 0.25rem;
     }
 
     .plan-header p {
-        color: #6b7280;
+        color: var(--text-gray);
         margin: 0;
     }
 
@@ -253,7 +211,7 @@
 
     .plan-note {
         text-align: center;
-        color: #6b7280;
+        color: var(--text-gray);
         font-size: 0.85rem;
         margin-top: 1rem;
     }

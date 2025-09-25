@@ -4,7 +4,7 @@
             <div class="footer-section">
                 <div class="footer-logo">
                     <img
-                        src="/assets/default-monochrome.svg"
+                        src="/assets/restyling/BiteMe In-29.png"
                         alt="BiteMe In"
                         class="footer-logo-img"
                     />
@@ -47,7 +47,7 @@
 
 <style>
     .footer {
-        background-color: var(--text-dark);
+        background-color: var(--primary-coral);
         color: white;
         padding: 4rem 0 0;
     }
@@ -60,14 +60,13 @@
     }
 
     .footer-logo-img {
-        height: 40px;
+        height: 56px;
         width: auto;
         margin-bottom: 1rem;
-        filter: brightness(0) invert(1);
     }
 
     .footer-section p {
-        color: #9ca3af;
+        color: rgba(255, 255, 255, 0.8);
         line-height: 1.6;
         margin-bottom: 1.5rem;
     }
@@ -87,35 +86,17 @@
     }
 
     .footer-section ul li a {
-        color: #9ca3af;
+        color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
     .footer-section ul li a:hover {
-        color: var(--primary-coral);
-    }
-
-    .social-links {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .social-links a {
-        font-size: 1.5rem;
-        transition: transform 0.3s ease;
-        color: #9ca3af;
-        text-decoration: none;
-    }
-
-    .social-links a:hover {
-        transform: translateY(-2px);
-        color: var(--primary-coral);
+        color: var(--white);
     }
 
     .footer-bottom {
-        border-top: 1px solid #374151;
-        padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .footer-bottom-content {
@@ -125,7 +106,7 @@
     }
 
     .footer-bottom p {
-        color: #9ca3af;
+        color: rgba(255, 255, 255, 0.8);
         margin: 0;
     }
 
