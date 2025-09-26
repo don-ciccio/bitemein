@@ -366,21 +366,21 @@
 
     @media (max-width: 768px) {
         .hero-image {
-            padding: 2rem;
+            padding: 1rem;
         }
         .dashboard-preview {
-            max-width: 400px;
-            height: 400px;
+            max-width: 500px;
+            height: 500px;
         }
     }
 
     @media (max-width: 480px) {
         .hero-image {
-            padding: 1.5rem;
+            padding: 0.5rem;
         }
         .dashboard-preview {
-            max-width: 320px;
-            height: 320px;
+            max-width: 400px;
+            height: 400px;
         }
     }
 

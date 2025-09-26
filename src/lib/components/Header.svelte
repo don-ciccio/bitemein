@@ -148,11 +148,16 @@
     .header {
         position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         background: transparent;
         z-index: 1000;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 0.75rem 1rem;
+        transform: translateZ(0); /* Force hardware acceleration */
+        -webkit-transform: translateZ(0); /* Safari specific */
+        will-change: transform; /* Optimize for animations */
     }
 
     .header.scrolled {
@@ -277,9 +282,9 @@
         padding: 0;
     }
 
-    /* Blog page brand text - darker color for light background */
+    /* Blog page brand text - coral color for light background */
     .header.blog-page .brand-text {
-        color: var(--text-dark);
+        color: var(--primary-coral);
     }
 
     /* When scrolled on blog pages, use white text */
@@ -975,6 +980,27 @@
     }
 
     @media (max-width: 768px) {
+        .header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 1000 !important;
+            transform: translateZ(0) !important;
+            -webkit-transform: translateZ(0) !important;
+            will-change: transform !important;
+            backface-visibility: hidden !important;
+            -webkit-backface-visibility: hidden !important;
+        }
+
+        .header.scrolled {
+            position: fixed !important;
+            top: 0 !important;
+            transform: translateZ(0) !important;
+            -webkit-transform: translateZ(0) !important;
+        }
+
         :global(body) {
             padding-top: 70px;
         }
