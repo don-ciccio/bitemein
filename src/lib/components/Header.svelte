@@ -5,6 +5,8 @@
     let mobileMenuOpen = false;
     let scrolled = false;
     let headerElement;
+    let lastScrollY = 0;
+    let headerVisible = true;
 
     // Determine if we're on a light background page
     $: isLightBackground = $page.route.id?.includes("/blog");
@@ -31,13 +33,36 @@
     }
 
     function handleScroll() {
-        scrolled = window.scrollY > 50;
+        const currentScrollY = window.scrollY;
+        
+        // Update scrolled state
+        scrolled = currentScrollY > 50;
+        
+        // Handle header visibility on mobile
+        if (window.innerWidth <= 768) {
+            if (currentScrollY < lastScrollY || currentScrollY < 100) {
+                // Scrolling up or near top - show header
+                headerVisible = true;
+            } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down and not near top - hide header (unless mobile menu is open)
+                if (!mobileMenuOpen) {
+                    headerVisible = false;
+                }
+            }
+        } else {
+            // Always show header on desktop
+            headerVisible = true;
+        }
+        
+        lastScrollY = currentScrollY;
     }
 
     onMount(() => {
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll); // Handle resize events
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
         };
     });
 </script>
@@ -46,6 +71,7 @@
     class="header"
     class:scrolled
     class:blog-page={isLightBackground}
+    class:hidden={!headerVisible}
     bind:this={headerElement}
 >
     <nav class="nav" class:island={scrolled}>
@@ -158,6 +184,11 @@
         transform: translateZ(0); /* Force hardware acceleration */
         -webkit-transform: translateZ(0); /* Safari specific */
         will-change: transform; /* Optimize for animations */
+    }
+
+    .header.hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .header.scrolled {
@@ -994,11 +1025,20 @@
             -webkit-backface-visibility: hidden !important;
         }
 
+        .header.hidden {
+            transform: translateY(-100%) !important;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
         .header.scrolled {
             position: fixed !important;
             top: 0 !important;
             transform: translateZ(0) !important;
             -webkit-transform: translateZ(0) !important;
+        }
+
+        .header.scrolled.hidden {
+            transform: translateY(-100%) !important;
         }
 
         :global(body) {
