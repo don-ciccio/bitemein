@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <rect width="16" height="16" rx="3" fill="#FB5E5D"/>
+  <g transform="translate(2, 2)">
+    <!-- Simplified fork -->
+    <path d="M3 2 L3 8 M2 2 L2 3 M4 2 L4 3 M2 2 L4 2" stroke="white" stroke-width="0.5" fill="none"/>
+    <!-- Simplified knife -->
+    <path d="M8 2 L8 8 M7.5 2 L8.5 2 L8.5 3 L7.5 3 Z" stroke="white" stroke-width="0.5" fill="white"/>
+    <!-- Simplified plate -->
+    <circle cx="6" cy="10" r="2" stroke="white" stroke-width="0.5" fill="none"/>
+    <!-- Food dots -->
+    <circle cx="5.5" cy="9.5" r="0.3" fill="white"/>
+    <circle cx="6.5" cy="9.5" r="0.3" fill="white"/>
+  </g>
+</svg>
