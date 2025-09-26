@@ -81,7 +81,11 @@
                     <li>✓ Range mode reservations</li>
                     <li>✓ Table merging capabilities</li>
                     <li>✓ Advanced reservation management</li>
-                    <li>✓ <strong>Multi-location support (up to 5 locations)</strong></li>
+                    <li>
+                        ✓ <strong
+                            >Multi-location support (up to 5 locations)</strong
+                        >
+                    </li>
                 </ul>
                 <a
                     href="https://apps.shopify.com/bitemein-restaurant-booking"
