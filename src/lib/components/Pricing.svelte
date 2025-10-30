@@ -55,6 +55,7 @@
                     <li>✓ Range mode reservations</li>
                     <li>✓ Table merging capabilities</li>
                     <li>✓ Advanced reservation management</li>
+                    <li>✓ Conditional reservation deposits (by party size, day/time)</li>
                 </ul>
                 <a
                     href="https://apps.shopify.com/bitemein-restaurant-booking"
@@ -82,6 +83,7 @@
                     <li>✓ Table merging capabilities</li>
                     <li>✓ Advanced reservation management</li>
                     <li>✓ <strong>Multi-location support (up to 5 locations)</strong></li>
+                    <li>✓ Conditional reservation deposits (by party size, day/time)</li>
                 </ul>
                 <a
                     href="https://apps.shopify.com/bitemein-restaurant-booking"

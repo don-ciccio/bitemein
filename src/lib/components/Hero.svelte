@@ -21,7 +21,9 @@
                     dining reservation system. Customers book tables directly
                     from your website while you manage availability, time slots,
                     and capacity in real-time. Reduce no-shows with automated
-                    reminders and integrate seamlessly with your existing theme.
+                    reminders, and optionally require conditional reservation deposits
+                    by party size, day of week, and booking time — all integrated
+                    seamlessly with your existing theme.
                 </p>
                 <div class="hero-actions">
                     <a
@@ -49,6 +51,10 @@
                     <div class="stat">
                         <div class="stat-number">One-Click</div>
                         <div class="stat-label">Installation</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Deposits</div>
+                        <div class="stat-label">Conditional</div>
                     </div>
                 </div>
             </div>
@@ -174,18 +180,11 @@
 
     .highlight {
         color: var(--white);
-        position: relative;
-    }
-
-    .highlight::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 8px;
-        background: rgba(255, 255, 255, 0.3);
-        z-index: -1;
+        text-decoration: underline;
+        text-decoration-thickness: 0.18em; /* scales with font size for consistency */
+        text-underline-offset: 0.15em; /* keeps underline visually separated from text */
+        text-decoration-color: rgba(255, 255, 255, 0.35);
+        text-decoration-skip-ink: auto;
     }
 
     .hero-subtitle {

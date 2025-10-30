@@ -91,7 +91,9 @@
                 <h1 class="hero-title">Insights & Updates</h1>
                 <p class="hero-subtitle">
                     Stay up to date with the latest trends in food delivery,
-                    restaurant management, and industry insights from our team.
+                    restaurant management, and reservation strategy. Learn about
+                    conditional reservation deposits, policy best practices, and
+                    how to reduce no-shows while providing a great guest experience.
                 </p>
             </div>
         </section>

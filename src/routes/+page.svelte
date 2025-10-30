@@ -10,8 +10,8 @@
     <!-- Primary Meta Tags -->
     <title>BiteMe In - Restaurant Table Booking System for Shopify | Reduce No-Shows by 60%</title>
     <meta name="title" content="BiteMe In - Restaurant Table Booking System for Shopify | Reduce No-Shows by 60%" />
-    <meta name="description" content="Transform your restaurant with BiteMe In - the leading Shopify restaurant table booking system. Automated reservations, SMS reminders, waitlist management, and seamless integration. Start free today!" />
-    <meta name="keywords" content="restaurant table booking system, shopify restaurant app, table reservation system, restaurant booking app, restaurant management software, table booking shopify, restaurant reservation app, booking system for restaurants, shopify table booking, restaurant table management" />
+    <meta name="description" content="Transform your restaurant with BiteMe In — the leading Shopify restaurant table booking system. Now with conditional reservation deposits by party size, day of week, and booking time. Reduce no-shows with automated reservations, SMS reminders, waitlist management, and seamless integration. Start free today!" />
+    <meta name="keywords" content="restaurant table booking system, shopify restaurant app, table reservation system, reservation deposits, conditional deposits, party size deposit, booking time deposit, reduce no-shows, restaurant booking app, restaurant management software, table booking shopify, restaurant reservation app, booking system for restaurants, shopify table booking, restaurant table management" />
     <meta name="author" content="BiteMe In" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://bitemein.com" />
@@ -72,9 +72,28 @@
         "Shopify integration",
         "Real-time availability",
         "Customer management",
+        "Conditional reservation deposits",
         "No-show reduction"
       ],
       "screenshot": "https://bitemein.com/assets/vecteezy_a-variety-of-dishes-are-laid-out-on-the-table-to-prepare-for_8934713.jpg"
+    }
+    </script>
+
+    <!-- FAQPage structured data: Reservation deposit question for enhanced SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I require reservation deposits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BiteMe In supports conditional reservation deposits that you can enable based on party size, day of the week, and booking time. This helps reduce no-shows and keeps table availability accurate. Enable in Settings → Policies & Deposits."
+          }
+        }
+      ]
     }
     </script>
 </svelte:head>

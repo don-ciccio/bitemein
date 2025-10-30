@@ -76,6 +76,18 @@
                     businesses with multiple branches.
                 </p>
             </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">💳</div>
+                <h4>Conditional Reservation Deposits</h4>
+                <p>
+                    Require deposits only when needed: set rules by party size,
+                    day of week, and booking time. Reduce no-shows while keeping
+                    bookings frictionless for smaller parties and off-peak hours.
+                    Enable in Settings → Policies & Deposits.
+                    <a href="/blog/shopify-reservation-deposits-for-restaurants-on-shopify" aria-label="Learn how to set up reservation deposits on Shopify">Learn how →</a>
+                </p>
+            </div>
         </div>
     </div>
 </section>

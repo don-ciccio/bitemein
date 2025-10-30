@@ -34,6 +34,16 @@
             </div>
 
             <div class="faq-item">
+                <h3 class="faq-question">Can I require reservation deposits?</h3>
+                <p class="faq-answer">
+                    Yes. You can enable conditional reservation deposits and set
+                    rules based on party size, days of the week, and time of booking.
+                    This helps reduce no-shows while keeping smaller parties and
+                    off-peak bookings frictionless. Enable in Settings → Policies & Deposits.
+                </p>
+            </div>
+
+            <div class="faq-item">
                 <h3 class="faq-question">How do I reduce no-shows?</h3>
                 <p class="faq-answer">
                     Use the app's automated reminder and confirmation system to
