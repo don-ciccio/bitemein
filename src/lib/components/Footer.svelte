@@ -29,7 +29,8 @@
                 <h4>Get Started</h4>
                 <ul>
                     <li>
-                        <a href="https://apps.shopify.com/biteme-in"
+                        <a
+                            href="https://apps.shopify.com/bitemein-restaurant-booking"
                             >Install Shopify App</a
                         >
                     </li>
