@@ -44,6 +44,16 @@
             </div>
 
             <div class="faq-item">
+                <h3 class="faq-question">How does the waitlist feature work?</h3>
+                <p class="faq-answer">
+                    When a time slot is full, guests can join the waitlist. As soon as a
+                    table frees up, BiteMe In automatically sends an email offer to
+                    waitlisted guests so they can book the opening. You control the
+                    offer timing and expiration policy from your admin.
+                </p>
+            </div>
+
+            <div class="faq-item">
                 <h3 class="faq-question">How do I reduce no-shows?</h3>
                 <p class="faq-answer">
                     Use the app's automated reminder and confirmation system to

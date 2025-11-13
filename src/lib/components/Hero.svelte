@@ -21,9 +21,10 @@
                     dining reservation system. Customers book tables directly
                     from your website while you manage availability, time slots,
                     and capacity in real-time. Reduce no-shows with automated
-                    reminders, and optionally require conditional reservation deposits
-                    by party size, day of week, and booking time — all integrated
-                    seamlessly with your existing theme.
+                    reminders, optionally require conditional reservation deposits,
+                    and fill cancellations automatically with a smart waitlist that emails
+                    guests when a table becomes available — all integrated seamlessly
+                    with your existing theme.
                 </p>
                 <div class="hero-actions">
                     <a
@@ -55,6 +56,10 @@
                     <div class="stat">
                         <div class="stat-number">Deposits</div>
                         <div class="stat-label">Conditional</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Waitlist</div>
+                        <div class="stat-label">Smart Offers</div>
                     </div>
                 </div>
             </div>
@@ -171,7 +176,7 @@
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: clamp(2rem, 6vw, 3.5rem);
         font-weight: 800;
         line-height: 1.1;
         margin-bottom: 1.5rem;
@@ -188,7 +193,7 @@
     }
 
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: clamp(1rem, 2.8vw, 1.25rem);
         line-height: 1.6;
         color: rgba(255, 255, 255, 0.9);
         margin-bottom: 2.5rem;
@@ -217,6 +222,7 @@
     .hero-stats {
         display: flex;
         gap: 2rem;
+        flex-wrap: wrap;
     }
 
     .stat {
@@ -378,19 +384,21 @@
             padding: 0.5rem;
         }
         .dashboard-preview {
-            max-width: 400px;
-            height: 400px;
+            max-width: 320px;
+            height: 320px;
         }
     }
 
     @media (max-width: 768px) {
         .hero {
             padding: 100px 0 60px;
+            padding-top: 140px;
+            margin-top: -60px;
         }
 
         .hero-content {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
             text-align: center;
         }
 
@@ -400,17 +408,29 @@
             margin-bottom: 1.5rem;
         }
 
+        .badge-text {
+            font-size: 0.8rem;
+            padding: 0.6rem 1rem;
+        }
+
         .hero-title {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 8vw, 2.5rem);
         }
 
         .hero-actions {
             flex-direction: column;
             align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-large {
+            width: 100%;
+            max-width: 320px;
         }
 
         .hero-stats {
             justify-content: center;
+            gap: 1rem;
         }
 
         .floating-card {

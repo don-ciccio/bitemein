@@ -40,6 +40,16 @@
             </div>
 
             <div class="benefit">
+                <div class="benefit-icon">💌</div>
+                <h4>Smart Waitlist Offers</h4>
+                <p>
+                    When all slots are full, guests can join the waitlist. As soon as a
+                    table frees up, BiteMe In automatically emails a booking offer so
+                    you can fill cancellations instantly.
+                </p>
+            </div>
+
+            <div class="benefit">
                 <div class="benefit-icon">⚡</div>
                 <h4>Real-Time Scheduling</h4>
                 <p>

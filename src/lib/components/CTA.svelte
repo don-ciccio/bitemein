@@ -11,8 +11,8 @@
             <div class="cta-text">
                 <h2>Ready to Transform Your Restaurant?</h2>
                 <p>
-                    Streamline your restaurant bookings with our comprehensive
-                    table reservation system
+                    Streamline bookings and fill cancellations automatically with our
+                    smart waitlist and table reservation system
                 </p>
                 <div class="cta-buttons">
                     <a

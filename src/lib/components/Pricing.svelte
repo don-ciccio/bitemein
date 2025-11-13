@@ -44,18 +44,14 @@
                         <span class="amount">9.99</span>
                         <span class="period">/month</span>
                     </div>
-                    <p>Everything in Essential</p>
+                    <p>Everything in Free</p>
                 </div>
                 <ul class="features-list">
+                    <li>✓ Everything in Free</li>
                     <li>✓ Unlimited reservations</li>
                     <li>✓ Up to 20 tables</li>
-                    <li>✓ Standard time slots</li>
-                    <li>✓ Unlimited tables</li>
                     <li>✓ Custom timeslots</li>
-                    <li>✓ Range mode reservations</li>
-                    <li>✓ Table merging capabilities</li>
-                    <li>✓ Advanced reservation management</li>
-                    <li>✓ Conditional reservation deposits (by party size, day/time)</li>
+                    <li>✓ Waitlist management</li>
                 </ul>
                 <a
                     href="https://apps.shopify.com/bitemein-restaurant-booking"
@@ -82,8 +78,16 @@
                     <li>✓ Range mode reservations</li>
                     <li>✓ Table merging capabilities</li>
                     <li>✓ Advanced reservation management</li>
-                    <li>✓ <strong>Multi-location support (up to 5 locations)</strong></li>
-                    <li>✓ Conditional reservation deposits (by party size, day/time)</li>
+                    <li>✓ Smart waitlist offers (automatic email on openings)</li>
+                    <li>
+                        ✓ <strong
+                            >Multi-location support (up to 5 locations)</strong
+                        >
+                    </li>
+                    <li>
+                        ✓ Conditional reservation deposits (by party size,
+                        day/time)
+                    </li>
                 </ul>
                 <a
                     href="https://apps.shopify.com/bitemein-restaurant-booking"
