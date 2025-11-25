@@ -21,6 +21,8 @@
                     <li><a href="/#features">Features</a></li>
                     <li><a href="/#pricing">Pricing</a></li>
                     <li><a href="/blog">Blog</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use">Terms of Use</a></li>
                     <li><a href="mailto:support@bitemein.com">Contact</a></li>
                 </ul>
             </div>
