@@ -43,9 +43,9 @@
                 <div class="benefit-icon">💌</div>
                 <h4>Smart Waitlist Offers</h4>
                 <p>
-                    When all slots are full, guests can join the waitlist. As soon as a
-                    table frees up, BiteMe In automatically emails a booking offer so
-                    you can fill cancellations instantly.
+                    When all slots are full, guests can join the waitlist. As
+                    soon as a table frees up, BiteMe In automatically emails a
+                    booking offer so you can fill cancellations instantly.
                 </p>
             </div>
 
@@ -93,9 +93,22 @@
                 <p>
                     Require deposits only when needed: set rules by party size,
                     day of week, and booking time. Reduce no-shows while keeping
-                    bookings frictionless for smaller parties and off-peak hours.
-                    Enable in Settings → Policies & Deposits.
-                    <a href="/blog/shopify-reservation-deposits-for-restaurants-on-shopify" aria-label="Learn how to set up reservation deposits on Shopify">Learn how →</a>
+                    bookings frictionless for smaller parties and off-peak
+                    hours. Enable in Settings → Policies & Deposits.
+                    <a
+                        href="/blog/shopify-reservation-deposits-for-restaurants-on-shopify"
+                        aria-label="Learn how to set up reservation deposits on Shopify"
+                        >Learn how →</a
+                    >
+                </p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">📅</div>
+                <h4>Google Calendar Integration</h4>
+                <p>
+                    Automatically sync reservations to your Google Calendar.
+                    Keep your team in sync and never miss a booking.
                 </p>
             </div>
         </div>

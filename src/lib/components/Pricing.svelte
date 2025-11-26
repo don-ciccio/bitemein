@@ -52,6 +52,7 @@
                     <li>✓ Up to 20 tables</li>
                     <li>✓ Custom timeslots</li>
                     <li>✓ Waitlist management</li>
+                    <li>✓ Google Calendar integration</li>
                 </ul>
                 <a
                     href="https://apps.shopify.com/bitemein-restaurant-booking"
@@ -78,7 +79,9 @@
                     <li>✓ Range mode reservations</li>
                     <li>✓ Table merging capabilities</li>
                     <li>✓ Advanced reservation management</li>
-                    <li>✓ Smart waitlist offers (automatic email on openings)</li>
+                    <li>
+                        ✓ Smart waitlist offers (automatic email on openings)
+                    </li>
                     <li>
                         ✓ <strong
                             >Multi-location support (up to 5 locations)</strong
