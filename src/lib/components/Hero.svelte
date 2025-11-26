@@ -4,10 +4,8 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="badge-text">
-                        <svg class="badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                        </svg>
-                        Transform Your Shopify Store into a Complete Dining Reservation System
+                        Transform Your Shopify Store into a Complete Dining
+                        Reservation System
                     </span>
                 </div>
                 <h1 class="hero-title">
@@ -21,10 +19,10 @@
                     dining reservation system. Customers book tables directly
                     from your website while you manage availability, time slots,
                     and capacity in real-time. Reduce no-shows with automated
-                    reminders, optionally require conditional reservation deposits,
-                    and fill cancellations automatically with a smart waitlist that emails
-                    guests when a table becomes available — all integrated seamlessly
-                    with your existing theme.
+                    reminders, optionally require conditional reservation
+                    deposits, and fill cancellations automatically with a smart
+                    waitlist that emails guests when a table becomes available —
+                    all integrated seamlessly with your existing theme.
                 </p>
                 <div class="hero-actions">
                     <a
@@ -152,7 +150,11 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background: linear-gradient(135deg, rgba(251, 94, 93, 0.15), rgba(251, 94, 93, 0.25));
+        background: linear-gradient(
+            135deg,
+            rgba(251, 94, 93, 0.15),
+            rgba(251, 94, 93, 0.25)
+        );
         color: var(--white);
         padding: 0.75rem 1.25rem;
         border-radius: 50px;
